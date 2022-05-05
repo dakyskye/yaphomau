@@ -48,7 +48,6 @@ class APIRequestException(Exception):
 def request_and_record_ip(ip: str) -> tuple:
     res = requests.get(url=_API_URI.format(ip))
     if res.status_code != 200:
-        print(res.status_code)
         raise APIRequestException("the response from the API isn't acceptable")
 
     data = res.json()
