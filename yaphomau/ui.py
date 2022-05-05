@@ -12,7 +12,6 @@ def event_loop():
             process_ip(ip)
         except APIRequestException as e:
             print(e)
-            return
 
 
 def get_ip():
